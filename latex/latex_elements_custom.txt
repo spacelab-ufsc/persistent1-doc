@@ -1,0 +1,130 @@
+{
+    'papersize': 'a4paper',
+    'pointsize': '12pt',
+    'babel': r'\usepackage[english]{babel}',
+    'fncychap': '',
+    'fontpkg': r'\usepackage[math]{iwona}',
+    'preamble': r"""
+        \usepackage{spacelab_book}
+        % Protect hyperlink commands globally so they can safely live inside captions
+        \let\oldhyperlink\hyperlink
+        \renewcommand{\hyperlink}[2]{\protect\oldhyperlink{#1}{#2}}
+        % Red text role (:red:`TBD`), used for pending items
+        \providecommand*{\DUrolered}[1]{\textcolor{red}{#1}}
+        """,
+    'inputenc': r'\usepackage[utf8]{inputenc}',
+    'fontenc': r'\usepackage[T1]{fontenc}',
+    'geometry': r'\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}',
+    'extrapackages': r"""
+        \usepackage{titling}
+        \usepackage{fancyhdr}
+        """,
+    'hyperref': r"""
+        \usepackage[hidelinks]{hyperref}
+        \usepackage{hypcap}
+        \urlstyle{same}
+        """,
+    'sphinxsetup': 'TitleColor={rgb}{0.0,0.0,0.0}',
+    'maketitle': r"""
+\begin{titlepage}
+
+\thispagestyle{empty}
+
+\begin{flushleft}
+SL.CDR.R.V1.0
+\end{flushleft}
+
+\vspace{1cm}
+
+\begin{figure}[!ht]
+    \begin{flushleft}
+        \includegraphics[width=7cm]{spacelab-logo.png}
+    \end{flushleft}
+\end{figure}
+
+\begin{flushleft}
+\Huge{\textbf{\thetitle: Critical Design Review}}
+\rule[0pt]{\textwidth}{5pt}
+\end{flushleft}
+
+\vspace{0.2cm}
+
+\begin{flushleft}
+\textit{Revision} \\
+\textit{SpaceLab, Federal University of Santa Catarina, Florianópolis - Brazil}
+\end{flushleft}
+
+\vfill
+\vfill
+
+\begin{flushright}
+November 2026
+\end{flushright}
+
+\end{titlepage}
+
+\cleardoublepage
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\textbf{\thetitle: Critical Design Review}
+
+\textit{November, 2026}
+
+\vspace{1cm}
+
+\textbf{Project Chief:}
+
+Eduardo Augusto Bezerra
+
+\vspace{1cm}
+
+\textbf{Authors:}
+
+Fernanda Paiva de Morais \\
+Gabriel Mariano Marcelino \\
+João Cláudio Barcellos \\
+Rebecca Quintino Do Ó \\
+
+\vspace{1cm}
+
+\textbf{Contributing Authors:}
+
+\textcolor{red}{TODO}
+
+\vspace{1cm}
+
+
+\textbf{Revision Control:}
+
+\end{center}
+
+\begin{table}[!ht]
+    \begin{center}
+        \begin{tabular}{cL{5cm}L{5.5cm}C{2cm}}
+            \toprule[1.5pt]
+            \textbf{Version} & \textbf{Author}  & \textbf{Changes}    & \textbf{Date} \\
+            \midrule
+            0.0 & Fernanda Paiva de Morais  & Document creation   & 2024/03/03 \\
+            1.0 & \textcolor{red}{TBD}       & CDR release         & \textcolor{red}{TBD} \\
+                &                           &                     &            \\
+            \bottomrule[1.5pt]
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\vfill
+
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=0.25\textwidth]{by-sa.pdf}
+	\end{center}
+\end{figure}
+
+Copyright\textcopyright\ by The Persistent-1 Contributors. \thetitle. This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/4.0/}{http://creativecommons.org/licenses/by-sa/4.0/}.
+
+\cleardoublepage
+    """,
+}
