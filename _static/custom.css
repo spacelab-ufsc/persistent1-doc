@@ -1,0 +1,29 @@
+/*
+ custom.css
+
+ Copyright The Persistent-1 Contributors.
+
+ Persistent-1 Documentation
+
+ This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
+ International License. To view a copy of this license,
+ visit http://creativecommons.org/licenses/by-sa/4.0/.
+*/
+
+/* Center the main content wrapper and set a comfortable width */
+.wy-nav-content {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+/* Wide tables (requirements, risks) wrap instead of scrolling */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    white-space: normal !important;
+}
+
+/* Pending items (TBD, TBC, TODO): :red:`TBD` */
+.red {
+    color: #d11 !important;
+    font-weight: bold;
+}
