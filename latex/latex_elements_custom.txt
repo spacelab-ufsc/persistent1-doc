@@ -11,6 +11,13 @@
         \renewcommand{\hyperlink}[2]{\protect\oldhyperlink{#1}{#2}}
         % Red text role (:red:`TBD`), used for pending items
         \providecommand*{\DUrolered}[1]{\textcolor{red}{#1}}
+        % Unicode math symbols used in the text (pdflatex has no glyph mapping for them)
+        \DeclareUnicodeCharacter{2265}{\ensuremath{\geq}}
+        \DeclareUnicodeCharacter{2264}{\ensuremath{\leq}}
+        \DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+        % Header height required by fancyhdr with 12pt text
+        \setlength{\headheight}{14.5pt}
+        \addtolength{\topmargin}{-2.5pt}
         """,
     'inputenc': r'\usepackage[utf8]{inputenc}',
     'fontenc': r'\usepackage[T1]{fontenc}',
